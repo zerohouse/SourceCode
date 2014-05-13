@@ -1,0 +1,22 @@
+[자바스크립트]자식창에서 부모창의 함수제어
+프로그래밍/Java Script
+먼저 부모창에 function test(){}이라는 함수가 있다고 가정한다.
+
+1)팝업창일경우
+opener.test();
+2)iframe일경우 
+parent.test(); 
+와 같이 호출하면 된다. (무지쉽지?) 
+3) 부모창에서 iframe내 함수접근
+   var ifr = document.getElementById('iframeID');
+    ifr.contentWindow.function_name();
+부모창에서 'iframeID'이라는 iFrame에 지정된 페이지의 function_name()함수에 접근하는 방법이다.
+
+
+4) <a href='www.url.com' target='_parent'>link</a>으로 지정해도 됨. 물론 자바스크립트를 제어하는 것은 아니라서
+     parent.location.href='www.url.com';과 동일한 효과만 볼수 있음. 페이지 이동에 국한하여 사용할 수 있는 태그이다.
+     기초적이고 간단한 것인데 종종 잊어먹곤 하니 유의할 것.
+
+
+
+http://gonnie.tistory.com/entry/%EC%9E%90%EB%B0%94%EC%8A%A4%ED%81%AC%EB%A6%BD%ED%8A%B8%EC%9E%90%EC%8B%9D%EC%B0%BD%EC%97%90%EC%84%9C-%EB%B6%80%EB%A7%88%EC%B0%BD-%ED%95%A8%EC%88%98%EC%A0%9C%EC%96%B4

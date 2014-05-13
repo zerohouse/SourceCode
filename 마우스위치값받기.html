@@ -1,0 +1,50 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<HTML xmlns="http://www.w3.org/1999/xhtml" xml:lang="ko" lang="ko"> 
+<TITLE>  </TITLE>
+<meta http-equiv="content-Language" content="ko">
+<meta http-equiv="Content-Type" content="text/html; charset=euc-kr" />
+<meta http-equiv="Content-Script-Type" content="text/javascript" />
+<meta http-equiv="Content-Style-Type" content="text/css" />
+<script language="javascript">
+var getNowScroll = function(){ 
+var de = document.documentElement; 
+var b = document.body; 
+var now = {}; 
+
+
+now.X = document.all ? (!de.scrollLeft ? b.scrollLeft : de.scrollLeft) : (window.pageXOffset ? window.pageXOffset : window.scrollX); 
+now.Y = document.all ? (!de.scrollTop ? b.scrollTop : de.scrollTop) : (window.pageYOffset ? window.pageYOffset : window.scrollY); 
+
+return now; 
+} 
+</script>
+
+<script type="text/javascript"> 
+var msgNowScroll = function(){ 
+nowScroll = getNowScroll(); //alert!!(nowScroll.X + "," + nowScroll.Y);  //스크롤 위치값
+var ev=window.event || e ;
+var mouseX1=ev.clientX+nowScroll.X;  //마우스의  X좌표
+var mouseY1=ev.clientY+nowScroll.Y;  // 마우스의 Y좌표
+alert(mouseX1+"/"+mouseY1);
+} 
+</script>
+
+</HEAD>
+
+<BODY>
+
+
+소스는 어렵지 않아서 별다른 설명이 필요 없을 것 같네요. 
+IE7, FF2 에서 테스트 해보았으며, 
+사용법은 간단합니다 
+
+<div style="height:500px;">
+</div>
+<input type="button" onclick="msgNowScroll()" value="마우스 위치값 알아내기"> 
+<div style="height:500px;">
+</div>
+<input type="button" onclick="msgNowScroll()" value="마우스 위치값 알아내기"> 
+
+
+</BODY>
+</HTML>

@@ -1,0 +1,17 @@
+
+
+ <script type="text/javascript">
+ function selecticon(){
+  var sample = document.getElementsByName('icon'); 
+ for(var i=0;i<sample.length;i++){ // 길이잴라고 가져왔구나..
+   if(sample[i].checked == true){
+      document.select.src = sample[i].value + ".png";
+      alert(sample[i].value);
+   }
+  }
+ }
+ </script>
+
+     <img name="select" src="http://thumbnail.egloos.net/850x0/http://pds18.egloos.com/pds/201009/22/15/a0008915_4c99aa5b233d9.jpg" onClick="javascript:chgImg();">
+
+ <input type="button" value="확인" onclick="selecticon();"/>

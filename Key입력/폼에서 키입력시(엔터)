@@ -1,0 +1,14 @@
+입력폼에서 엔터키 치면 스크립트 실행하기. 
+
+ 미리보기       [스크랩]
+
+ 
+<input type="text" name="searchWord" value="" size="25" value=태그인넷 tagin.net 
+onKeyDown="javascript:if (event.keyCode == 13) search_check();"> 
+->search_check 함수 실행
+
+<input type="text" name="searchWord" value="" size="25" value=태그인넷 tagin.net 
+onKeyDown="javascript:if (event.keyCode == 13) return false;">
+->아무것도 실행안되게 하기.. 엔터키쳐도 무반응
+
+13은 엔터키의 키코드값입니다.

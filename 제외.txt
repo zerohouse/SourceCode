@@ -1,0 +1,7 @@
+  <SCRIPT LANGUAGE="JavaScript">
+  <!--
+ $("div").not("#div3, #div5").each(function(i){
+  alert( "div3, div5 를 제외한 나머지 항목들 : " + this.id );
+ });
+  //-->
+  </SCRIPT>

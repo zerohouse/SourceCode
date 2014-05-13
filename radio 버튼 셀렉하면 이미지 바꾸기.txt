@@ -1,0 +1,50 @@
+<HTML>
+<HEAD>
+<TITLE> New Document </TITLE>
+
+
+ <script type="text/javascript">
+ function test_sample(){
+  var sample = document.getElementsByName('flower');
+ for(var i=0;i<sample.length;i++){
+   if(sample[i].checked == true){
+sample[i].value = "ht" + sample[i].value 
+      document.nemo.src = sample[i].value
+    alert(sample[i].value);
+   }
+  }
+ }
+ </script>
+
+
+<script language="javascript">
+
+    var img = new Array("http://thumbnail.egloos.net/850x0/http://pds18.egloos.com/pds/201009/22/15/a0008915_4c99aa5b233d9.jpg","http://pds21.egloos.com/pds/201210/28/15/a0008915_508c728b81343.jpg","http://thumbnail.egloos.net/850x0/http://pds18.egloos.com/pds/201009/22/15/a0008915_4c99aa5b233d9.jpg");
+
+    var i;
+    i=0;
+    function chgImg(){
+      document.nemo.src = img[i++];
+      //document.images[0].src = img[i++];도 가능.
+    }
+
+</script>
+
+
+</HEAD>
+
+<BODY>
+     <img name="nemo" src="http://thumbnail.egloos.net/850x0/http://pds18.egloos.com/pds/201009/22/15/a0008915_4c99aa5b233d9.jpg" onClick="javascript:chgImg();">
+</BODY>
+
+
+
+
+ <input type="radio" name="flower" value="tp://thumbnail.egloos.net/850x0/http://pds18.egloos.com/pds/201009/22/15/a0008915_4c99aa5b233d9.jpg"/>a<br>
+ <input type="radio" name="flower" value="2"/>c<br>
+ <input type="radio" name="flower" value="tp://pds21.egloos.com/pds/201210/28/15/a0008915_508c728b81343.jpg","http://thumbnail.egloos.net/850x0/http://pds18.egloos.com/pds/201009/22/15/a0008915_4c99aa5b233d9.jpg"/>b<br>
+ <input type="radio" name="flower" value="6"/>c<br>
+ <input type="radio" name="flower" value="5"/>d<br><br>
+ <input name="nemo" type="button" value="확인" onclick="test_sample();"/>
+
+</HTML>

@@ -1,0 +1,28 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-Transitional.dtd">
+ <html>
+ <head>
+ <title></title>
+ <script type="text/javascript">
+ function test_sample(){
+  var sample = document.getElementsByName('flower');
+
+ for(var i=0;i<sample.length;i++){
+   if(sample[i].checked == true){
+    alert(sample[i].value);
+   }
+  }
+ }
+ </script>
+ </head>
+
+<body>
+ <input type="radio" name="flower" value="1"/>a<br>
+ <input type="radio" name="flower" value="2"/>c<br>
+ <input type="radio" name="flower" value="3"/>b<br>
+ <input type="radio" name="flower" value="4"/>c<br>
+ <input type="radio" name="flower" value="5"/>d<br><br>
+
+
+ <input type="button" value="확인" onclick="test_sample();"/>
+ </body>
+ </html>
